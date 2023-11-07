@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import MainLayout from "../../components/MainLayout";
 
 const RegisterPage = () => {
   const {
@@ -18,7 +19,7 @@ const RegisterPage = () => {
     mode: "onChange",
   });
   return (
-    <div>
+    <MainLayout>
       <section className="container mx-auto px-5 py-10">
         <div className="w-full max-w-sm mx-auto">
           {/* page header */}
@@ -167,14 +168,14 @@ const RegisterPage = () => {
 
             <p className="text-sm font-semibold text-[#5a7184]">
               You have an account?{" "}
-              {/* <Link to="/login" className="text-primary">
+              <Link to="/login" className="text-primary">
                 Login now
-              </Link> */}
+              </Link>
             </p>
           </form>
         </div>
       </section>
-    </div>
+    </MainLayout>
   );
 };
 

@@ -101,9 +101,9 @@ const LoginPage = () => {
             </button>
             <p className="text-sm font-semibold text-[#5a7184]">
               Do not have an account?{" "}
-              {/* <Link to="/register" className="text-primary">
+              <Link to="/register" className="text-primary">
                 Register now
-              </Link> */}
+              </Link>
             </p>
           </form>
         </div>
