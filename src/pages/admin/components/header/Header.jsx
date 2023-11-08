@@ -1,13 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Images from "../../../../constants/Images";
 import { AiFillDashboard, AiOutlineMenu } from "react-icons/ai";
 import { FaComments } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import NavItem from "./NavItem";
 import NavItemCollapse from "./NavItemCollapse";
+import { useQueryClient } from "@tanstack/react-query";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 const Header = () => {
+    const navigate = useNavigate();
+    const queryClient = useQueryClient();
+    const [isMenuActive,setIsMenuActive] = useState(false);
+    const [activeNavName,setActiveNavName] = useState("dashboard");
+    const windowsize = useWindowSize();
+
+
+
   return (
     <header className="flex h-fit w-full items-center justify-between p-4 lg:h-full lg:max-w-[300px] lg:flex-col lg:items-start lg:justify-start lg:p-0">
       {/* logo */}
@@ -37,23 +47,23 @@ const Header = () => {
               link="/admin"
               icon={<AiFillDashboard className="text-xl" />}
               name="dashboard"
-              // activeNavName={activeNavName}
-              // setActiveNavName={setActiveNavName}
+              activeNavName={activeNavName}
+              setActiveNavName={setActiveNavName}
             />
             <NavItem
               title="Comments"
               link="/admin/comments"
               icon={<FaComments className="text-xl" />}
               name="comments"
-              // activeNavName={activeNavName}
-              // setActiveNavName={setActiveNavName}
+              activeNavName={activeNavName}
+              setActiveNavName={setActiveNavName}
             />
             <NavItemCollapse
               title="Posts"
               icon={<MdDashboard className="text-xl" />}
               name="posts"
-            //   activeNavName={activeNavName}
-            //   setActiveNavName={setActiveNavName}
+              activeNavName={activeNavName}
+              setActiveNavName={setActiveNavName}
             >
               <Link to="/admin/posts/manage">Manage all posts</Link>
               <button

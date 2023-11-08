@@ -7,6 +7,9 @@ import ProfilePicture from './components/ProfilePicture';
 import AdminLayout from './pages/admin/AdminLayout';
 import Admin from './pages/admin/screens/Admin';
 import { Toaster } from 'react-hot-toast';
+import Comments from './pages/admin/screens/comments/Comments';
+import ManagePosts from './pages/admin/screens/posts/ManagePosts';
+import EditPost from './pages/admin/screens/posts/EditPost';
 
 function App() {
 
@@ -19,6 +22,9 @@ function App() {
         <Route path='/profile' element={<ProfilePicture />} />
         <Route path='/admin' element={<AdminLayout />}>
           <Route index element={<Admin />} />
+          <Route path='comments' element={<Comments />} />
+          <Route path='posts/manage' element={<ManagePosts />} />
+          <Route path='posts/manage/edit/:slug' element={<EditPost />} />
         </Route>
       </Routes>
       <Toaster />
