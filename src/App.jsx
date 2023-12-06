@@ -10,6 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import Comments from './pages/admin/screens/comments/Comments';
 import ManagePosts from './pages/admin/screens/posts/ManagePosts';
 import EditPost from './pages/admin/screens/posts/EditPost';
+import ArticleDetailPage from './pages/articleDetail/ArticleDetailPage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route index path='/' element={<HomePage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path="articleDetail" element={<ArticleDetailPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/profile' element={<ProfilePicture />} />
         <Route path='/admin' element={<AdminLayout />}>
