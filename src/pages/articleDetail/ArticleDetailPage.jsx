@@ -1,4 +1,5 @@
 import React from "react";
+import SuggestedPost from "./container/SuggestedPost";
 
 const ArticleDetailPage = () => {
   return (
@@ -40,6 +41,7 @@ const ArticleDetailPage = () => {
         </article>
         {/* leatest article */}
         <div>
+            <SuggestedPost header="Latest Article" className="mt-8 lg:mt-0 lg:max-w-xs" />
             <div>
             <h2 className="font-roboto font-medium text-dark-hard mb-4 md:text-xl">
                 Share on:
