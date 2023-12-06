@@ -26,7 +26,7 @@ function App() {
           <Route index element={<Admin />} />
           <Route path='comments' element={<Comments />} />
           <Route path='posts/manage' element={<ManagePosts />} />
-          <Route path='posts/manage/edit/:slug' element={<EditPost />} />
+          <Route path='posts/manage/edit' element={<EditPost />} />
         </Route>
       </Routes>
       <Toaster />
