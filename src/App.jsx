@@ -11,6 +11,7 @@ import Comments from './pages/admin/screens/comments/Comments';
 import ManagePosts from './pages/admin/screens/posts/ManagePosts';
 import EditPost from './pages/admin/screens/posts/EditPost';
 import ArticleDetailPage from './pages/articleDetail/ArticleDetailPage';
+import CreatePost from './pages/admin/screens/posts/CreatePost';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='comments' element={<Comments />} />
           <Route path='posts/manage' element={<ManagePosts />} />
           <Route path='posts/manage/edit' element={<EditPost />} />
+          <Route path='posts/manage/create' element={<CreatePost />} />
         </Route>
       </Routes>
       <Toaster />
