@@ -1,13 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { getAllPosts } from "../../../services/index/posts";
 import toast from "react-hot-toast";
 import ArticleCardSkeleton from "../../../components/ArticleCardSkeleton";
 import ErrorMessage from "../../../components/ErrorMessage";
 import ArticleCard from "../../../components/ArticleCard";
+import { data } from "autoprefixer";
 
 const Articles = () => {
+  const [blogs,setBlogs] = useState([]);
+
+  useEffect(() =>{
+    fetch('http://localhost:5000/blogs')
+    .then(res => res.json())
+    .then(data => setBlogs(data))
+  },[])
+
   // const {data, isLoading, isError} = useQuery({
   //     queryFn: () => getAllPosts(),
   //     queryKey: ["posts"],
@@ -69,7 +78,7 @@ const Articles = () => {
             </div> */}
 
       <div className=" flex flex-wrap md:gap-x-5 gap-y-5 pb-10">
-        {posts.map((item, index) => (
+        {blogs.map((item, index) => (
           <ArticleCard
           key={index}
           post={item}
