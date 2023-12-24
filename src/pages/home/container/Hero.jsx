@@ -12,8 +12,7 @@ const Hero = () => {
           Read the most interesting articles
         </h1>
         <p className="text-dark-light mt-4 text-center md:text-xl lg:text-base xl:text-xl lg:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+          We provide not only article or story. We want to provide a emotion.
         </p>
         {/* hero search and title section */}
         <div className="flex flex-col gap-y-2.5 mt-10 lg:mt-6 xl:mt-10 relative">
